@@ -1,29 +1,30 @@
 # lastwar-alliance-help
 
-This script automatically detects and clicks on the help button in Last War.
+A small automation script that detects and clicks the in-game **Help** button in **Last War**.
 
-Main Functionality:
+## What it does
 
-Continuously searches the screen for two possible images: help.png or help_bluestacks.png
-Runs silently until it finds one of the images
-When found, waits a random delay (0-5 seconds) to appear more human-like
-Confirms the image is still there after the delay
-If still present, clicks on it and returns the mouse to its original position
-Only prints output when it successfully finds and clicks an image
+- Continuously scans your screen for either `help.png` or `help_bluestacks.png`
+- Runs silently while searching (no spammy logs)
+- When an image is found:
+  - waits a random delay (0–5s) to look more human
+  - verifies the image is still present after the delay
+  - clicks it
+  - returns your mouse to its original position
+- Only prints output when a click actually happens
 
-Key Features:
+## Key features
 
-Silent operation: No output while searching, only prints when images are detected
-Click counter: Tracks only successful clicks (not just detections)
-Timestamps: All messages include the current date/time
-Human-like behavior: Random delays before clicking
-Failsafe protection: Moving mouse to screen corner stops the script
-Verification: Double-checks the image is still there before clicking to avoid false positives
+- **Silent operation:** no output until an image is found *and clicked*
+- **Click counter:** tracks only successful clicks (not just detections)
+- **Timestamps:** every message includes the current date/time
+- **Human-like behavior:** random delay before clicking
+- **Failsafe protection:** moving the mouse to a screen corner stops the script
+- **Verification step:** double-checks the image is still there to avoid false positives
 
-Output Format:
+## Example output
 
+```text
 [2025-12-03 14:30:15] Found help.png! Waiting for 2.34 seconds...
 [2025-12-03 14:30:17] Clicking at (500, 300) - Successful click #1
 [2025-12-03 14:30:17] Returned to original position (800, 600)
-
-The script runs indefinitely until you stop it with CTRL+C.
