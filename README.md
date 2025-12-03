@@ -1,6 +1,6 @@
 # lastwar-alliance-help
 
-This script automatically detects and clicks on the help button in Last War. Here's what it does:
+This script automatically detects and clicks on the help button in Last War.
 
 Main Functionality:
 
